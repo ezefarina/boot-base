@@ -1,0 +1,6 @@
+include ':loan-application-service'
+include ':loan-application-service:loan-application-service-common'
+include ':loan-application-service:loan-application-service-service'
+include ':loan-application-service:loan-application-service-webapp'
+include ':loan-schema'
+include ':loan-model'
