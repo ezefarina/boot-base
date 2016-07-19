@@ -1,0 +1,15 @@
+include 'loan-service'
+include 'loan-service:loan-service-common'
+include 'loan-service:loan-service-service'
+include 'loan-service:loan-service-webapp'
+
+include 'loan-persistence'
+include 'loan-persistence:loan-persistence-datasource'
+include 'loan-persistence:loan-persistence-model'
+include 'loan-persistence:loan-persistence-schema'
+
+include 'loan-common'
+include 'loan-common:loan-common-test'
+include 'loan-common:loan-common-commons'
+
+include 'loan-front'
