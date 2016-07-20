@@ -3,3 +3,6 @@ build/
 classes/
 *.iml
 .gradle/
+gradle/
+gradlew
+gradlew.bat
