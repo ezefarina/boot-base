@@ -4,6 +4,7 @@ apply plugin: 'war'
 war {
 	baseName = 'homework'
 	version = '0.0.1-SNAPSHOT'
+    
 }
 
 configurations {
@@ -30,8 +31,8 @@ dependencies {
     compile('org.webjars:bootstrap:3.3.6')
     compile('org.webjars:jquery:3.0.0')
     compile('javax.servlet:javax.servlet-api:3.1.0')
-    compile project(':loan-model')
-    compile project(':loan-schema')
+    compile project(':loan-persistence:loan-persistence-model')
+    compile project(':loan-persistence:loan-persistence-schema')
     compile project(':loan-application-service:loan-application-service-common')
     compile project(':loan-application-service:loan-application-service-service')
 }

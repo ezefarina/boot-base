@@ -4,8 +4,6 @@ import com.fourfinance.loan.controller.BaseController;
 import com.fourfinance.loan.service.configuration.ServiceConfiguration;
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
