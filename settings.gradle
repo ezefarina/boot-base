@@ -10,3 +10,5 @@ include 'loan-persistence:loan-persistence-schema'
 
 include 'loan-common'
 include 'loan-common:loan-common-test'
+include 'loan-front'
+
