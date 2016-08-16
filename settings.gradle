@@ -1,7 +1,7 @@
-include 'loan-application-service'
-include 'loan-application-service:loan-application-service-common'
-include 'loan-application-service:loan-application-service-service'
-include 'loan-application-service:loan-application-service-webapp'
+include 'loan-service'
+include 'loan-service:loan-application-service-common'
+include 'loan-service:loan-application-service-service'
+include 'loan-service:loan-application-service-webapp'
 
 include 'loan-persistence'
 include 'loan-persistence:loan-persistence-datasource'
@@ -10,5 +10,5 @@ include 'loan-persistence:loan-persistence-schema'
 
 include 'loan-common'
 include 'loan-common:loan-common-test'
-include 'loan-front'
 
+include 'loan-front'
