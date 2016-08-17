@@ -25,8 +25,8 @@ These properties are read or looked up in the following places, being the last l
 Liquibase changelogs can be run in two different ways:
 * **Gradle Plugin**: By running the liquibase tasks through Gradle
 * **On Application Startup**: By changing the following values on db.properties, liquibase can regenerate the database on application startup
-liquibase.enabled=false
-liquibase.drop-first=false
+`liquibase.enabled=false
+liquibase.drop-first=false`
 
 Just like **when** changelogs are executed, you can also switch the liquibase profile by changing the property **liquibase.contexts** in db.properties
 
