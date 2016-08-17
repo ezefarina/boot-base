@@ -20,6 +20,16 @@ These properties are read or looked up in the following places, being the last l
 * **classpath**: This will always be found as it's packed in the jar/war or whatever the package method is. It will contain the default values
 * **$HOME**: This would be considered optional, and it may contain environment specific properties such as the DB connection url, production profile, etc.
 
+### Database & Liquibase handling
+
+Liquibase changelogs can be run in two different ways:
+* **Gradle Plugin**: By running the liquibase tasks through Gradle
+* **On Application Startup**: By changing the following values on db.properties, liquibase can regenerate the database on application startup
+liquibase.enabled=false
+liquibase.drop-first=false
+
+Just like **when** changelogs are executed, you can also switch the liquibase profile by changing the property **liquibase.contexts** in db.properties
+
 ### Monitoring
 
 There are two options for monitoring enabled by default:

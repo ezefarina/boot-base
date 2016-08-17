@@ -30,7 +30,7 @@ if (propertiesFile.exists()) {
 liquibase {
     activities {
         main {
-            changeLogFile properties."liquibase.change-log"
+            changeLogFile properties."liquibase-gradle-change-log"
             url properties."spring.datasource.url"
             username properties."spring.datasource.username"
             password properties."spring.datasource.password"
