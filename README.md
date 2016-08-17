@@ -2,7 +2,7 @@
 
 This project is meant to be a good start point for every well-distributed application, based on my experience in multiple companies, following the best standards I could found, but sticking to the technologies I mostly like. As every piece of art you will find a bit of subjectivity :D
 
-### Building
+### Building & CI
 
 [**Travis-CI**](https://travis-ci.org/) is being configured through .travis.yml file. Be sure if you fork this repository to configure the GitHub hooks so you keep the CI functions
 
@@ -36,12 +36,16 @@ There are two options for monitoring enabled by default:
 * **JavaMelody**: Accessible through /odin/monitoring
 * **Spring Actuator Endpoints**: See available endpoints [here](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
 
+### Detailed configuration
+
+For more detailed/specific configuration remember the properties suite available on Spring Boot [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
+
 ### TODO's
 
 - [ ] Integrate fully stateless front in ReactJS or AngularJS 2
 - [X] Include JavaMelody as a default in every WebApp
 - [X] Add healthchecks and effective properties
-- [ ] Add provisioning package with Packer, Puppet
+- [ ] Add Docker compliant provisioning with Packer and Ansible
 - [ ] Add virtualization capabilities with Vagrant
 - [ ] Support stateless consumption of API through AWS custom origins
 - [X] Add Travis-CI support
