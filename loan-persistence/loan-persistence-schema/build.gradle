@@ -1,6 +1,7 @@
 buildscript {
     dependencies {
-        classpath 'com.h2database:h2:1.3.156'
+        // classpath 'com.h2database:h2:1.3.156'
+        classpath 'org.postgresql:postgresql:9.2-1004-jdbc41'
     }
 }
 plugins {
@@ -10,12 +11,8 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'liquibase'
 
-dependencies {
-    compile project(':loan-persistence:loan-persistence-datasource')
-}
-
 Properties properties = new Properties()
-File propertiesFile = new File("classpath:db.properties")
+File propertiesFile = new File("../loan-persistence-datasource/src/main/resources/db.properties")
 if (propertiesFile.exists()) {
     println "Loading internal properties"
     propertiesFile.withInputStream {

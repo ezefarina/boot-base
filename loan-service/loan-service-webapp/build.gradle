@@ -18,6 +18,7 @@ dependencies {
     compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
     compile group: 'com.google.guava', name: 'guava', version: '19.0'
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    compile group: 'net.bull.javamelody', name: 'javamelody-core', version: '1.32.1'
 
     compile project(':loan-persistence:loan-persistence-model')
     compile project(':loan-persistence:loan-persistence-schema')
