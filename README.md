@@ -38,11 +38,13 @@ There are two options for monitoring enabled by default:
 
 ### TODO's
 
-* Integrate fully stateless front in ReactJS or AngularJS 2
-* Include JavaMelody as a default in every WebApp
-* Add healthchecks and effective properties
-* Add provisioning package with Packer, Puppet
-* Add virtualization capabilities with Vagrant
-* Support stateless consumption of API through AWS custom origins
-* Add EditorConfig and CheckStyle support
-* Deb package deliverable for continuous delivery purposes
+- [ ] Integrate fully stateless front in ReactJS or AngularJS 2
+- [X] Include JavaMelody as a default in every WebApp
+- [X] Add healthchecks and effective properties
+- [ ] Add provisioning package with Packer, Puppet
+- [ ] Add virtualization capabilities with Vagrant
+- [ ] Support stateless consumption of API through AWS custom origins
+- [X] Add Travis-CI support
+- [X] Add EditorConfig support
+- [ ] Add CheckStyle support
+- [ ] Deb package deliverable for continuous delivery purposes
