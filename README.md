@@ -13,11 +13,18 @@ You can find below a list of the properties used by the different modules:
 * **db.properties** (loan-persistence/loan-persistence-datasource): Datasource configuration properties
 * **model.properties** (loan-persistence/loan-persistence-model): JPA and Hibernate configuration properties
 * **service.properties** (loan-service/loan-service-service): Any kind of properties needed by the services layer
+* **web.properties** (loan-service/loan-service-webapp): Configurations for Spring MVC, Actuator, etc
 
 These properties are read or looked up in the following places, being the last location found the one that overrides the previous ones. More locations could be added if needed but having just two levels is more than enough to handle multiple environments
 
 * **classpath**: This will always be found as it's packed in the jar/war or whatever the package method is. It will contain the default values
 * **$HOME**: This would be considered optional, and it may contain environment specific properties such as the DB connection url, production profile, etc.
+
+### Monitoring
+
+There are two options for monitoring enabled by default:
+* **JavaMelody**: Accessible through /odin/monitoring
+* **Spring Actuator Endpoints**: See available endpoints [here](http://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
 
 ### TODO's
 

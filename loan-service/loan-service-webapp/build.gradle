@@ -19,9 +19,11 @@ dependencies {
     compile group: 'com.google.guava', name: 'guava', version: '19.0'
     compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
     compile group: 'net.bull.javamelody', name: 'javamelody-core', version: '1.32.1'
+    compile group: 'org.postgresql', name: 'postgresql', version:'9.2-1004-jdbc41'
 
     compile project(':loan-persistence:loan-persistence-model')
     compile project(':loan-persistence:loan-persistence-schema')
+    compile project(':loan-persistence:loan-persistence-datasource')
     compile project(':loan-service:loan-service-common')
     compile project(':loan-service:loan-service-service')
 

@@ -1,7 +1,15 @@
+import ch.qos.logback.classic.encoder.PatternLayoutEncoder
+
 import static ch.qos.logback.classic.Level.DEBUG
 import static ch.qos.logback.classic.Level.INFO
 
-logger("org.springframework", INFO)
-logger("org.apache", INFO)
-logger("org.hibernate", INFO)
-logger("com.fourfinance", DEBUG)
+appender("CONSOLE", ConsoleAppender) {
+  encoder(PatternLayoutEncoder) {
+    pattern = "%-4relative [%thread] - %msg%n"
+  }
+}
+
+logger("org.springframework", INFO, ["CONSOLE"])
+logger("org.apache", INFO, ["CONSOLE"])
+logger("org.hibernate", INFO, ["CONSOLE"])
+logger("com.fourfinance", DEBUG, ["CONSOLE"])

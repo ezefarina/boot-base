@@ -8,7 +8,9 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.*;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@Import({DataSourceConfiguration.class, ModelConfiguration.class, ServiceConfiguration.class})
+@Import({DataSourceConfiguration.class, ModelConfiguration.class, ServiceConfiguration.class, JavaMelodyConfiguration.class})
+@PropertySource(ignoreResourceNotFound = true,
+  value = {"classpath:web.properties","file:${user.home}/web.properties"})
 @ComponentScan(basePackageClasses = BaseController.class)
 @EnableWebMvc
 public class LoanApplication extends SpringBootServletInitializer {

@@ -14,6 +14,7 @@ dependencies {
     compile group: 'javax.el', name:'javax.el-api', version: '2.2.4'
     compile project(':loan-persistence:loan-persistence-model')
     compile project(':loan-persistence:loan-persistence-schema')
+    compile project(':loan-persistence:loan-persistence-datasource')
     compile project(':loan-service:loan-service-common')
 
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
