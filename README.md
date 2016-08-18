@@ -1,10 +1,13 @@
-# Odin Project
+# Odin Project [![Build Status][travis-image]][travis-url]
 
 This project is meant to be a good start point for every well-distributed application, based on my experience in multiple companies, following the best standards I could found, but sticking to the technologies I mostly like. As every piece of art you will find a bit of subjectivity :D
 
 ### Building & CI
 
 [**Travis-CI**](https://travis-ci.org/) is being configured through .travis.yml file. Be sure if you fork this repository to configure the GitHub hooks so you keep the CI functions
+
+[travis-url]: https://travis-ci.org/ezefarina/boot-base
+[travis-image]: https://travis-ci.org/ezefarina/boot-base.svg
 
 ### Handling multiple environments
 
@@ -40,9 +43,32 @@ There are two options for monitoring enabled by default:
 
 For more detailed/specific configuration remember the properties suite available on Spring Boot [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
 
+## Getting Started
+
+Prepare backend app by running Application main class or through Gradle under :loan-service:loan-service-webapp module
+
+```
+gradle bootRun
+```
+
+Serve frontend app by webpack-dev-server under loan-front
+
+```
+npm install webpack-dev-server rimraf webpack -g
+npm install
+npm start
+open http://localhost:8080
+```
+
+Front testing under loan-front
+
+```
+npm test
+```
+
 ### TODO's
 
-- [ ] Integrate fully stateless front in ReactJS or AngularJS 2
+- [-] Integrate fully stateless front AngularJS 2
 - [X] Include JavaMelody as a default in every WebApp
 - [X] Add healthchecks and effective properties
 - [ ] Add Docker compliant provisioning with Packer and Ansible
