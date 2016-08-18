@@ -11,5 +11,6 @@ include 'loan-persistence:loan-persistence-schema'
 include 'loan-common'
 include 'loan-common:loan-common-test'
 include 'loan-common:loan-common-commons'
+include 'loan-common:loan-common-security-token'
 
 include 'loan-front'

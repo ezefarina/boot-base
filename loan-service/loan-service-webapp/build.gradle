@@ -2,35 +2,37 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 
 war {
-	baseName = 'homework'
-	version = '0.0.1-SNAPSHOT'
+  baseName = 'homework'
+  version = '0.0.1-SNAPSHOT'
 }
 
 configurations {
-    providedRuntime
+  providedRuntime
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
-    compile group: 'org.pojomatic', name: 'pojomatic', version: '2.0.1'
-    compile group: 'joda-time', name: 'joda-time', version: '2.9.4'
-    compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
-    compile group: 'com.google.guava', name: 'guava', version: '19.0'
-    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
-    compile group: 'net.bull.javamelody', name: 'javamelody-core', version: '1.32.1'
-    compile group: 'org.postgresql', name: 'postgresql', version:'9.2-1004-jdbc41'
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
+  compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+  compile group: 'org.pojomatic', name: 'pojomatic', version: '2.0.1'
+  compile group: 'joda-time', name: 'joda-time', version: '2.9.4'
+  compile group: 'net.sf.dozer', name: 'dozer', version: '5.5.1'
+  compile group: 'com.google.guava', name: 'guava', version: '19.0'
+  compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+  compile group: 'net.bull.javamelody', name: 'javamelody-core', version: '1.32.1'
+  compile group: 'org.postgresql', name: 'postgresql', version: '9.2-1004-jdbc41'
 
-    compile project(':loan-persistence:loan-persistence-model')
-    compile project(':loan-persistence:loan-persistence-schema')
-    compile project(':loan-persistence:loan-persistence-datasource')
-    compile project(':loan-service:loan-service-common')
-    compile project(':loan-service:loan-service-service')
+  compile project(':loan-common:loan-common-commons')
+  compile project(':loan-persistence:loan-persistence-model')
+  compile project(':loan-persistence:loan-persistence-schema')
+  compile project(':loan-persistence:loan-persistence-datasource')
+  compile project(':loan-service:loan-service-common')
+  compile project(':loan-service:loan-service-service')
+  compile project(':loan-common:loan-common-security-token')
 
-    testCompile group: 'com.h2database', name: 'h2', version: '1.3.156'
-    testCompile group: 'org.liquibase', name: 'liquibase-core', version: '3.5.1'
-    testCompile group: 'org.liquibase', name: 'liquibase-groovy-dsl', version: '1.2.1'
-    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
-    testCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+  testCompile group: 'com.h2database', name: 'h2', version: '1.3.156'
+  testCompile group: 'org.liquibase', name: 'liquibase-core', version: '3.5.1'
+  testCompile group: 'org.liquibase', name: 'liquibase-groovy-dsl', version: '1.2.1'
+  testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+  testCompile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
+  testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }

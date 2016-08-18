@@ -22,18 +22,18 @@ public class PersonTest extends ModelBaseTest {
 
   @Test
   public void test () {
-    String firstName = RandomStringUtils.randomAlphanumeric(10);
-    String lastName = RandomStringUtils.randomAlphanumeric(10);
-    String identificationNumber = RandomStringUtils.randomAlphanumeric(10);
+    String username = RandomStringUtils.randomAlphanumeric(10);
+    String email = RandomStringUtils.randomAlphanumeric(10);
+    String password = RandomStringUtils.randomAlphanumeric(10);
     Person person = new Person()
-        .setFirstName(firstName)
-        .setLastName(lastName)
-        .setIdentificationNumber(identificationNumber);
+        .setUsername(username)
+        .setEmail(email)
+        .setPassword(password);
     person = repository.save(person);
     assertThat(person, is(not(nullValue())));
-    assertThat(person.getFirstName(),is(firstName));
-    assertThat(person.getLastName(),is(lastName));
-    assertThat(person.getIdentificationNumber(),is(identificationNumber));
+    assertThat(person.getUsername(),is(username));
+    assertThat(person.getEmail(),is(email));
+    assertThat(person.getPassword(),is(password));
   }
 
 }

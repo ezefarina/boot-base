@@ -13,12 +13,12 @@ public class Person implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @Column(name = "identificationnumber", nullable = false, length = 20)
-  private String identificationNumber;
-  @Column(name = "firstname", nullable = false, length = 20)
-  private String firstName;
-  @Column(name = "lastname", nullable = false, length = 20)
-  private String lastName;
+  @Column(name = "username", nullable = false, length = 20)
+  private String username;
+  @Column(name = "email", nullable = false, length = 120)
+  private String email;
+  @Column(name = "password", nullable = false, length = 20)
+  private String password;
 
   public Long getId() {
     return id;
@@ -29,30 +29,30 @@ public class Person implements Serializable {
     return this;
   }
 
-  public String getFirstName() {
-    return firstName;
+  public String getUsername() {
+    return username;
   }
 
-  public Person setFirstName(final String firstName) {
-    this.firstName = firstName;
+  public Person setUsername(final String username) {
+    this.username = username;
     return this;
   }
 
-  public String getIdentificationNumber() {
-    return identificationNumber;
+  public String getEmail() {
+    return email;
   }
 
-  public Person setIdentificationNumber(final String identificationNumber) {
-    this.identificationNumber = identificationNumber;
+  public Person setEmail(final String email) {
+    this.email = email;
     return this;
   }
 
-  public String getLastName() {
-    return lastName;
+  public String getPassword() {
+    return password;
   }
 
-  public Person setLastName(final String lastName) {
-    this.lastName = lastName;
+  public Person setPassword(final String password) {
+    this.password = password;
     return this;
   }
 

@@ -29,9 +29,15 @@ public class PersonServiceImpl extends BaseService<PersonDto,Person> implements 
   }
 
   @Override
-  public PersonDto getByIdentificationNumber(String identificationNumber) {
-    Preconditions.checkNotNull(identificationNumber,"identificationNumber is required");
-    return translate(personRepository.findByIdentificationNumber(identificationNumber));
+  public PersonDto getByUsername(String username) {
+    Preconditions.checkNotNull(username,"username is required");
+    return translate(personRepository.findByUsername(username));
+  }
+
+  @Override
+  public PersonDto getByEmail(final String email) {
+    Preconditions.checkNotNull(email,"email is required");
+    return translate(personRepository.findByEmail(email));
   }
 
 }

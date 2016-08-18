@@ -33,9 +33,9 @@ public class PersonServiceImplTest extends ServiceBaseTest {
   @Test
   public void testSave () {
     final PersonDto person = new PersonDto()
-        .setFirstName(RandomStringUtils.randomAlphabetic(10))
-        .setLastName(RandomStringUtils.randomAlphabetic(10))
-        .setIdentificationNumber(RandomStringUtils.randomNumeric(10));
+        .setUsername(RandomStringUtils.randomAlphabetic(10))
+        .setEmail(RandomStringUtils.randomAlphabetic(10))
+        .setPassword(RandomStringUtils.randomNumeric(10));
 
     personService.save(person);
 
@@ -43,29 +43,29 @@ public class PersonServiceImplTest extends ServiceBaseTest {
       Person capturedPerson;
       personRepository.save(capturedPerson = withCapture());
 
-      assertThat(capturedPerson.getFirstName(), is(person.getFirstName()));
-      assertThat(capturedPerson.getLastName(), is(person.getLastName()));
-      assertThat(capturedPerson.getIdentificationNumber(),is(person.getIdentificationNumber()));
+      assertThat(capturedPerson.getUsername(), is(person.getUsername()));
+      assertThat(capturedPerson.getEmail(), is(person.getEmail()));
+      assertThat(capturedPerson.getPassword(),is(person.getPassword()));
     }};
   }
 
   @Test
-  public void testGetByIdentificationNumber () {
-    final String id = RandomStringUtils.randomNumeric(10);
+  public void testGetByUsername () {
+    final String username = RandomStringUtils.randomNumeric(10);
 
     new Expectations() {{
-      personRepository.findByIdentificationNumber(id);
+      personRepository.findByUsername(username);
       result = new Person()
           .setId(321L);
     }};
 
-    final PersonDto person = personService.getByIdentificationNumber(id);
+    final PersonDto person = personService.getByUsername(username);
 
     new Verifications() {{
       String capturedId;
-      personRepository.findByIdentificationNumber(capturedId = withCapture());
+      personRepository.findByUsername(capturedId = withCapture());
 
-      assertThat(capturedId, is(id));
+      assertThat(capturedId, is(username));
       assertThat(person.getId(),is(321L));
     }};
   }

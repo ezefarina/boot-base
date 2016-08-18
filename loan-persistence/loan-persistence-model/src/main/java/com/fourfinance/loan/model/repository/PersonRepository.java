@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 public interface PersonRepository
     extends CrudRepository<Person, Long>, JpaSpecificationExecutor<Person>, BaseRepository {
 
-  Person findByIdentificationNumber(String identificationNumber);
+  Person findByUsername (String username);
+  Person findByEmail (String email);
 
 }

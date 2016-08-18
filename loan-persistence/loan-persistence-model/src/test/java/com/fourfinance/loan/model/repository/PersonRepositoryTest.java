@@ -19,9 +19,9 @@ public class PersonRepositoryTest extends ModelBaseTest {
   private PersonRepository personRepository;
 
   @Test
-  public void testFindByIdentificationNumber () {
+  public void testFindByUsername () {
     Person createdPerson = testUtil.createPerson();
-    Person foundPerson = personRepository.findByIdentificationNumber(createdPerson.getIdentificationNumber());
+    Person foundPerson = personRepository.findByUsername(createdPerson.getUsername());
     assertThat(foundPerson.getId(),is(createdPerson.getId()));
   }
 
