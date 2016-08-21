@@ -1,8 +1,10 @@
 package com.fourfinance.loan.security.authentication;
 
+import com.fourfinance.loan.security.SecurityBase;
 import com.fourfinance.loan.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.Order;
@@ -17,21 +19,17 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@ComponentScan(basePackageClasses = SecurityBase.class)
 @PropertySource(ignoreResourceNotFound = true,
   value = {"classpath:security.properties","file:${user.home}/security.properties"})
 @Order(1)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-  final private UserService userService;
-
-  final private TokenAuthenticationService tokenAuthenticationService;
+  @Autowired
+  private UserService userService;
 
   @Autowired
-  public SecurityConfig(UserService userService, TokenAuthenticationService tokenAuthenticationService) {
-    super(true);
-    this.userService = userService;
-    this.tokenAuthenticationService = tokenAuthenticationService;
-  }
+  private TokenAuthenticationService tokenAuthenticationService;
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -52,7 +50,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/api/**")
       .hasRole("USER")
       .antMatchers("/api/login")
-      .anonymous();
+      .permitAll();
 
     http.addFilterBefore(new StatelessLoginFilter("/api/login", tokenAuthenticationService, userService, authenticationManager()), UsernamePasswordAuthenticationFilter.class);
 
@@ -77,5 +75,3 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   }
 
 }
-
-

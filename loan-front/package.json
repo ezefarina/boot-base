@@ -64,7 +64,7 @@
     "angular2-hmr": "~0.8.1",
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^1.1.1",
-    "bootstrap-loader": "^1.0.8",
+    "bootstrap-loader": "^1.1.0",
     "bootstrap-sass": "^3.3.7",
     "codelyzer": "~0.0.26",
     "css-loader": "^0.23.1",
@@ -98,6 +98,7 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-manifest-plugin": "^1.0.0",
+    "extract-text-webpack-plugin": "^2.0.0",
     "webpack-merge": "~0.14.1"
   }
 }

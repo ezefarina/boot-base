@@ -7,13 +7,13 @@ databaseChangeLog() {
                 nullable(false)
                 primaryKey(true)
             }
-            column(name: "username", type: "VARCHAR(20)") {
+            column(name: "username", type: "VARCHAR(40)") {
                 nullable(false)
             }
             column(name: "email", type: "VARCHAR(120)") {
                 nullable(false)
             }
-            column(name: "password", type: "VARCHAR(20)") {
+            column(name: "password", type: "VARCHAR(200)") {
                 nullable(false)
             }
         }

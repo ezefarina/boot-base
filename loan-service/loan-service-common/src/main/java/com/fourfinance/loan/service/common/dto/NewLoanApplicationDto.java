@@ -11,11 +11,7 @@ import java.io.Serializable;
 @AutoProperty
 public class NewLoanApplicationDto implements Serializable {
 
-  @Min(0)
-  @Max(999999)
-  @NotNull
   private Double amount;
-  @NotNull
   private String identificationNumber;
   private String firstName;
   private String lastName;

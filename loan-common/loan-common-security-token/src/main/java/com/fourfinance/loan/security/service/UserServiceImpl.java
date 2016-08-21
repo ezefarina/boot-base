@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public UsernamePasswordAuthenticationToken toAuthenticationToken(final LoginAttempt loginAttempt) {
-    return new UsernamePasswordAuthenticationToken(loginAttempt.getUsername(), loginAttempt.getPassword());
+    return new UsernamePasswordAuthenticationToken(loginAttempt.getEmail(), loginAttempt.getPassword());
   }
 
   @Override

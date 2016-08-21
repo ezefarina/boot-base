@@ -1,21 +1,20 @@
 package com.fourfinance.loan.security.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.pojomatic.Pojomatic;
 import org.pojomatic.annotations.AutoProperty;
 
 @AutoProperty
 public class LoginAttempt {
 
-  private String username;
+  private String email;
   private String password;
 
-  public String getUsername() {
-    return username;
+  public String getEmail() {
+    return email;
   }
 
-  public LoginAttempt setUsername(final String username) {
-    this.username = username;
+  public LoginAttempt setEmail(final String email) {
+    this.email = email;
     return this;
   }
 
