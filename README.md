@@ -13,10 +13,12 @@ This project is meant to be a good start point for every well-distributed applic
 
 You can find below a list of the properties used by the different modules:
 
-* **db.properties** (loan-persistence/loan-persistence-datasource): Datasource configuration properties
-* **model.properties** (loan-persistence/loan-persistence-model): JPA and Hibernate configuration properties
-* **service.properties** (loan-service/loan-service-service): Any kind of properties needed by the services layer
-* **web.properties** (loan-service/loan-service-webapp): Configurations for Spring MVC, Actuator, etc
+* **db.properties** (odin-persistence/odin-persistence-datasource): Datasource configuration properties
+* **model.properties** (odin-persistence/odin-persistence-model): JPA and Hibernate configuration properties
+* **common.properties** (odin-common/odin-common-commons): Spring general configurations or common properties to be used in every module
+* **security.properties** (odin-common/odin-common-security-token): Security module properties
+* **service.properties** (odin-service/odin-service-service): Any kind of properties needed by the services layer
+* **web.properties** (odin-service/odin-service-webapp): Configurations for Spring MVC, Actuator, etc
 
 These properties are read or looked up in the following places, being the last location found the one that overrides the previous ones. More locations could be added if needed but having just two levels is more than enough to handle multiple environments
 
@@ -45,13 +47,13 @@ For more detailed/specific configuration remember the properties suite available
 
 ## Getting Started
 
-Prepare backend app by running Application main class or through Gradle under :loan-service:loan-service-webapp module
+Prepare backend app by running Application main class or through Gradle under :odin-service:odin-service-webapp module
 
 ```
 gradle bootRun
 ```
 
-Serve frontend app by webpack-dev-server under loan-front
+Serve frontend app by webpack-dev-server under odin-front
 
 ```
 npm install webpack-dev-server rimraf webpack -g
@@ -60,7 +62,7 @@ npm start
 open http://localhost:8080
 ```
 
-Front testing under loan-front
+Front testing under odin-front
 
 ```
 npm test
