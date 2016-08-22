@@ -1,7 +1,7 @@
 {
-  "name": "boot-base",
+  "name": "odin",
   "version": "0.1.0",
-  "description": "Boot Base",
+  "description": "Odin",
   "main": "",
   "scripts": {
     "rimraf": "rimraf",
@@ -27,13 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ezefarina/boot-base.git"
+    "url": "https://github.com/ezefarina/odin.git"
   },
   "author": "ezefarina <ezefarina@gmail.com>",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ezefarina/boot-base.git"
+    "url": "https://github.com/ezefarina/odin/issues"
   },
-  "homepage": "https://github.com/ezefarina/boot-base.git",
+  "homepage": "https://github.com/ezefarina/odin",
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
     "@angular/compiler": "2.0.0-rc.4",
@@ -64,7 +65,7 @@
     "angular2-hmr": "~0.8.1",
     "angular2-template-loader": "^0.4.0",
     "awesome-typescript-loader": "^1.1.1",
-    "bootstrap-loader": "^1.1.0",
+    "bootstrap-loader": "^1.0.8",
     "bootstrap-sass": "^3.3.7",
     "codelyzer": "~0.0.26",
     "css-loader": "^0.23.1",
@@ -98,7 +99,6 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-manifest-plugin": "^1.0.0",
-    "extract-text-webpack-plugin": "^2.0.0",
     "webpack-merge": "~0.14.1"
   }
 }
