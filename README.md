@@ -1,4 +1,4 @@
-# Odin Project
+# Odin Project [![Build Status][travis-image]][travis-url]
 
 This project is meant to be a good start point for every well-distributed application, based on my experience in multiple companies, following the best standards I could found, but sticking to the technologies I mostly like. As every piece of art you will find a bit of subjectivity :D
 
@@ -6,14 +6,19 @@ This project is meant to be a good start point for every well-distributed applic
 
 [**Travis-CI**](https://travis-ci.org/) is being configured through .travis.yml file. Be sure if you fork this repository to configure the GitHub hooks so you keep the CI functions
 
+[travis-url]: https://travis-ci.org/ezefarina/boot-base
+[travis-image]: https://travis-ci.org/ezefarina/boot-base.svg
+
 ### Handling multiple environments
 
 You can find below a list of the properties used by the different modules:
 
-* **db.properties** (loan-persistence/loan-persistence-datasource): Datasource configuration properties
-* **model.properties** (loan-persistence/loan-persistence-model): JPA and Hibernate configuration properties
-* **service.properties** (loan-service/loan-service-service): Any kind of properties needed by the services layer
-* **web.properties** (loan-service/loan-service-webapp): Configurations for Spring MVC, Actuator, etc
+* **db.properties** (odin-persistence/odin-persistence-datasource): Datasource configuration properties
+* **model.properties** (odin-persistence/odin-persistence-model): JPA and Hibernate configuration properties
+* **common.properties** (odin-common/odin-common-commons): Spring general configurations or common properties to be used in every module
+* **security.properties** (odin-common/odin-common-security-token): Security module properties
+* **service.properties** (odin-service/odin-service-service): Any kind of properties needed by the services layer
+* **web.properties** (odin-service/odin-service-webapp): Configurations for Spring MVC, Actuator, etc
 
 These properties are read or looked up in the following places, being the last location found the one that overrides the previous ones. More locations could be added if needed but having just two levels is more than enough to handle multiple environments
 
@@ -40,9 +45,32 @@ There are two options for monitoring enabled by default:
 
 For more detailed/specific configuration remember the properties suite available on Spring Boot [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
 
+## Getting Started
+
+Prepare backend app by running Application main class or through Gradle under :odin-service:odin-service-webapp module
+
+```
+gradle bootRun
+```
+
+Serve frontend app by webpack-dev-server under odin-front
+
+```
+npm install webpack-dev-server rimraf webpack -g
+npm install
+npm start
+open http://localhost:8080
+```
+
+Front testing under odin-front
+
+```
+npm test
+```
+
 ### TODO's
 
-- [ ] Integrate fully stateless front in ReactJS or AngularJS 2
+- [-] Integrate fully stateless front AngularJS 2
 - [X] Include JavaMelody as a default in every WebApp
 - [X] Add healthchecks and effective properties
 - [ ] Add Docker compliant provisioning with Packer and Ansible

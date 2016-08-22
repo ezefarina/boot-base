@@ -1,0 +1,13 @@
+@import 'src/shared/css/index';
+
+.posts li {
+  @extend %list_1;
+}
+
+.content {
+  display: block;
+}
+
+.timestamp {
+  color: $weak-text-color;
+}
